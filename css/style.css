@@ -80,78 +80,6 @@ body .section {
 }
 
 @font-face {
-  font-family: 1;
-  font-display: swap;
-  src: url("../fonts/1-cancellaresca-script-let-plain10.woff2") format("woff2"), url("../fonts/1-cancellaresca-script-let-plain10.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: ceremonious;
-  font-display: swap;
-  src: url("../fonts/ceremonious-one.woff2") format("woff2"), url("../fonts/ceremonious-one.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: cyrillichelvet;
-  font-display: swap;
-  src: url("../fonts/cyrillichelvet-italic.woff2") format("woff2"), url("../fonts/cyrillichelvet-italic.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: dreamscar3;
-  font-display: swap;
-  src: url("../fonts/dreamscar3.woff2") format("woff2"), url("../fonts/dreamscar3.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: karina;
-  font-display: swap;
-  src: url("../fonts/karina-black-italic.woff2") format("woff2"), url("../fonts/karina-black-italic.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: decor;
-  font-display: swap;
-  src: url("../fonts/decor-bold-italic.woff2") format("woff2"), url("../fonts/decor-bold-italic.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: droid;
-  font-display: swap;
-  src: url("../fonts/droid-serif-bold-italic.woff2") format("woff2"), url("../fonts/droid-serif-bold-italic.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: karina;
-  font-display: swap;
-  src: url("../fonts/karina-rus-italic.woff2") format("woff2"), url("../fonts/karina-rus-italic.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: MrDafoe;
-  font-display: swap;
-  src: url("../fonts/MrDafoe-Regular.woff2") format("woff2"), url("../fonts/MrDafoe-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: nimbussanlcy;
   font-display: swap;
   src: url("../fonts/nimbussanlcy-italic.woff2") format("woff2"), url("../fonts/nimbussanlcy-italic.woff") format("woff");
@@ -160,33 +88,9 @@ body .section {
 }
 
 @font-face {
-  font-family: renfrew;
+  font-family: ceremonious;
   font-display: swap;
-  src: url("../fonts/renfrew-italic.woff2") format("woff2"), url("../fonts/renfrew-italic.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: veronica;
-  font-display: swap;
-  src: url("../fonts/veronica-script-two.woff2") format("woff2"), url("../fonts/veronica-script-two.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: parkavenue;
-  font-display: swap;
-  src: url("../fonts/parkavenue.woff2") format("woff2"), url("../fonts/parkavenue.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: rostov;
-  font-display: swap;
-  src: url("../fonts/rostov.woff2") format("woff2"), url("../fonts/rostov.woff") format("woff");
+  src: url("../fonts/ceremonious-one.woff2") format("woff2"), url("../fonts/ceremonious-one.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -900,21 +804,77 @@ body .section {
   opacity: 1;
 }
 
+.slider {
+  padding-bottom: 3rem;
+}
+
+.slider .swiper-scrollbar {
+  margin: 0 0 30px;
+  background-color: rgba(68, 68, 68, 0.5);
+  height: 3px;
+}
+
+.slider .swiper-scrollbar-drag {
+  height: 1px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 7px 1px #fff;
+          box-shadow: 0 0 7px 1px #fff;
+}
+
 .image-slider {
   padding: 30px 0px 70px 0px;
 }
 
 .image-slider__image {
   text-align: center;
+  height: 450px;
 }
 
 .image-slider__image img {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
+.slider__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+}
+
+.slider__buttons .swiper-button-next,
+.slider__buttons .swiper-button-prev {
+  position: static;
+}
+
+.slider__buttons .swiper-button-next::after,
+.slider__buttons .swiper-button-prev::after {
+  -webkit-transform: translateY(25%);
+      -ms-transform: translateY(25%);
+          transform: translateY(25%);
   color: rgba(255, 255, 255, 0.5);
+}
+
+.slider__buttons .swiper-button-next:hover::after,
+.slider__buttons .swiper-button-prev:hover::after {
+  color: rgb(255, 255, 255);
+}
+
+.swiper-pagination {
+  position: static;
+  padding: 0 15px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .swiper-button-next {
