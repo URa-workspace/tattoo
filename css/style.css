@@ -100,7 +100,7 @@ body .section {
   left: 0;
   top: 0;
   width: 100%;
-  padding: 24px 0;
+  padding: 10px 0;
   background-color: rgba(14, 13, 18, 0.9);
   z-index: 10;
   -webkit-box-sizing: border-box;
@@ -121,15 +121,34 @@ body .section {
   z-index: 10;
 }
 
+.header__col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__col .chang-lang {
+  padding: 8px 6px 6px;
+  border: none;
+  background-color: #000;
+}
+
+.header__col .chang-lang option {
+  color: #fff;
+  font-size: 18px;
+}
+
 .header__menu {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
+  overflow: scroll;
 }
 
 .header__toggle-menu {
+  margin-right: 1rem;
   width: 40px;
   height: 30px;
   display: -webkit-box;
@@ -285,6 +304,7 @@ body .section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-bottom: 3rem;
 }
 
 .menu__list {
@@ -567,7 +587,7 @@ body .section {
 
 .instructions__home {
   width: 100%;
-  min-height: 100vh;
+  min-height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -805,7 +825,7 @@ body .section {
 }
 
 .slider {
-  padding-bottom: 3rem;
+  padding: 3rem 0;
 }
 
 .slider .swiper-scrollbar {
@@ -849,6 +869,8 @@ body .section {
       -ms-flex-align: center;
           align-items: center;
   height: 50px;
+  position: relative;
+  z-index: 0;
 }
 
 .slider__buttons .swiper-button-next,
@@ -967,7 +989,8 @@ body .section {
   color: rgba(255, 255, 255, 0.486);
 }
 
-.form__item input {
+.form__item input,
+.form__item button {
   padding: 10px 10px;
   background-color: transparent;
   border: 2px solid rgba(255, 255, 255, 0.486);
@@ -983,25 +1006,26 @@ body .section {
   padding-top: 1rem;
 }
 
-.form__item--buttons input {
+.form__item--buttons button {
   width: 50%;
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   letter-spacing: 3px;
+  background-color: transparent;
 }
 
-.form__item--buttons input.reset {
+.form__item--buttons button.reset {
   border-radius: 25px 0 0 25px;
   border-width: 2px 1px 2px 2px;
 }
 
-.form__item--buttons input.submit {
+.form__item--buttons button.submit {
   border-radius: 0 25px 25px 0;
   border-width: 2px 2px 2px 1px;
 }
 
-.form__item--buttons input:hover {
+.form__item--buttons button:hover {
   background-color: rgb(255, 51, 0);
   color: rgba(0, 0, 0, 0.8);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
